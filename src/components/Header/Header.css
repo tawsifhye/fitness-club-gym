@@ -1,0 +1,8 @@
+.self-nav {
+    background-color: #2c679b;
+}
+
+.link-hover:hover {
+    color: yellow !important;
+    text-decoration: underline;
+}
