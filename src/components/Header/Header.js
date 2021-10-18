@@ -61,9 +61,6 @@ const Header = () => {
                 Contact Us
               </Link>
             </li>
-            {user.email && (
-              <li className="nav-item text-white p-2">{user.email}</li>
-            )}
             {user.email ? (
               <button onClick={logOut}>Log Out</button>
             ) : (
@@ -77,6 +74,9 @@ const Header = () => {
                   Login
                 </Link>
               </li>
+            )}
+            {user.email && (
+              <li className="nav-item text-white p-2">{user.email}</li>
             )}
           </ul>
         </div>

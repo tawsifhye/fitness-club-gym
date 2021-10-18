@@ -21,11 +21,11 @@ const Home = () => {
         Don’t give up on your dreams, or your dreams will give up on you.
       </p>
       <div className="container">
-        <div className="row align-items-center py-3">
+        <div className="row align-items-center justify-content-center py-3">
           <div className="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
             <img className="img-fluid rounded-circle" src={bannerImg} alt="" />
           </div>
-          <div className="col-lg-6 col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
+          <div className="col-lg-6 col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 text-center">
             <p className="fs-1">Elite Personal Training Services</p>
             <h1 className="display-1 fw-bold">
               MAKE IT <span className="text-danger">SHAPE</span>
