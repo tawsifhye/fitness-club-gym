@@ -7,11 +7,11 @@ const Home = () => {
   const [services, setServices] = useState([]);
 
   useEffect(() => {
-    fetch("./services.json")
+    fetch("/services.json")
       .then((res) => res.json())
       .then((data) => setServices(data));
   }, []);
-  console.log(services);
+  // console.log(services);
   return (
     <div>
       <h1 className=" text-center display-3 fw-bold p-2">

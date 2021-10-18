@@ -16,7 +16,7 @@ const Login = () => {
     error,
     handleResetPassword,
   } = useAuth();
-  console.log(user);
+  // console.log(user);
   return (
     <div className="form-container d-flex justify-content-center align-items-center">
       <div className="mx-5 my-2">
