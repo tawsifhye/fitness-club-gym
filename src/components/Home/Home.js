@@ -14,7 +14,7 @@ const Home = () => {
   console.log(services);
   return (
     <div>
-      <h1 className=" text-center display-3 fw-bold">
+      <h1 className=" text-center display-3 fw-bold p-2">
         Welcome to <span className="text-primary">Fitness Club</span>
       </h1>
       <p className="text-center fs-5 fw-bold">

@@ -6,7 +6,7 @@ import useAuth from "../../hooks/useAuth";
 const Header = () => {
   const { user, logOut } = useAuth();
   return (
-    <nav className="navbar navbar-expand-lg navbar-light self-navbar d-flex justify-content-end align-items-center self-nav">
+    <nav className="navbar navbar-expand-lg navbar-light sticky-lg-top self-navbar d-flex justify-content-end align-items-center self-nav">
       <div className="container w-50 ms-0 ps-3">
         <Link to="/home">
           <img

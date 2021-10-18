@@ -8,6 +8,7 @@ import Contact from "./components/Contact/Contact";
 import Login from "./components/Login/Login";
 import NotFound from "./components/NotFound/NotFound";
 import AuthProvider from "./contenxt/AuthProvider";
+import Details from "./components/Details/Details";
 
 function App() {
   return (
@@ -21,6 +22,9 @@ function App() {
             </Route>
             <Route path="/home">
               <Home></Home>
+            </Route>
+            <Route path="/details/:serviceId">
+              <Details></Details>
             </Route>
             <Route path="/events">
               <Events></Events>
