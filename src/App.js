@@ -9,6 +9,7 @@ import Login from "./components/Login/Login";
 import NotFound from "./components/NotFound/NotFound";
 import AuthProvider from "./contenxt/AuthProvider";
 import Details from "./components/Details/Details";
+import PrivateRoute from "./components/PrivateRoute/PrivateRoute";
 
 function App() {
   return (
@@ -23,9 +24,9 @@ function App() {
             <Route path="/home">
               <Home></Home>
             </Route>
-            <Route path="/details/:serviceId">
+            <PrivateRoute path="/details/:serviceId">
               <Details></Details>
-            </Route>
+            </PrivateRoute>
             <Route path="/trainer">
               <Trainer></Trainer>
             </Route>
