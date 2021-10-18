@@ -44,13 +44,15 @@ const Contact = () => {
             <p className="fs-5">Iris Watson. 10, P.O. Box 283 Newyork</p>
           </div>
           <div className="row col-lg-4 col-md-4 col-sm-12 justify-content-center text-center mx-auto">
-            <h1 className="display-2">{clockIcon}</h1>
-            <p className="fs-5">
-              <span className="text-danger">Week Days: </span>10:00 - 22:00
-            </p>
-            <p className="fs-5">
-              <span className="text-danger">Sunday: </span>Close
-            </p>
+            <h1 className="display-2 pt-lg-5 pt-xl-5 pt-md-5">{clockIcon}</h1>
+            <div className="">
+              <p className="fs-5">
+                <span className="text-danger">Week Days: </span>10:00 - 22:00
+              </p>
+              <p className="fs-5">
+                <span className="text-danger">Sunday: </span>Close
+              </p>
+            </div>
           </div>
         </div>
       </div>
