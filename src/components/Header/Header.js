@@ -4,7 +4,7 @@ import logo from "./logo.jpg";
 import "./Header.css";
 import useAuth from "../../hooks/useAuth";
 const Header = () => {
-  const { user } = useAuth();
+  const { user, logOut } = useAuth();
   return (
     <div className="">
       <nav className="navbar navbar-expand-lg navbar-light self-navbar d-flex justify-content-end align-items-center self-nav">
@@ -62,16 +62,23 @@ const Header = () => {
                   Contact Us
                 </Link>
               </li>
-              <li className="nav-item">
-                <Link
-                  className="nav-link active text-white
+              {user.email && (
+                <li className="nav-item text-white p-2">{user.email}</li>
+              )}
+              {user.email ? (
+                <button onClick={logOut}>Log Out</button>
+              ) : (
+                <li className="nav-item">
+                  <Link
+                    className="nav-link active text-white
                                 link-hover"
-                  aria-current="page"
-                  to="/login"
-                >
-                  Login
-                </Link>
-              </li>
+                    aria-current="page"
+                    to="/login"
+                  >
+                    Login
+                  </Link>
+                </li>
+              )}
             </ul>
           </div>
         </div>

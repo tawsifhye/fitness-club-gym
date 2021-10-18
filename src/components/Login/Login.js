@@ -1,7 +1,10 @@
-import React from "react";
+import React, { useEffect } from "react";
+import { useHistory } from "react-router";
+import { Link } from "react-router-dom";
 import useAuth from "../../hooks/useAuth";
 import "./Login.css";
 const Login = () => {
+  let history = useHistory();
   const {
     handleGoogleSignIn,
     handleRegistration,
@@ -13,6 +16,7 @@ const Login = () => {
     error,
     handleResetPassword,
   } = useAuth();
+  console.log(user);
   return (
     <div className="form-container d-flex justify-content-center align-items-center">
       <div className="mx-5 my-2">

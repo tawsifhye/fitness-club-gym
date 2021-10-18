@@ -7,6 +7,7 @@ import {
   sendEmailVerification,
   sendPasswordResetEmail,
   onAuthStateChanged,
+  signOut,
 } from "firebase/auth";
 import { useEffect, useState } from "react";
 import initializeAuthentication from "../Firebase/firebase.init";
@@ -23,11 +24,15 @@ const useFirebase = () => {
 
   //google sign in
   const handleGoogleSignIn = () => {
-    signInWithPopup(auth, GoogleProvider).then((result) => {
-      const user = result.user;
-      console.log(user);
-      setUser(user);
-    });
+    signInWithPopup(auth, GoogleProvider)
+      .then((result) => {
+        const user = result.user;
+        console.log(user.email);
+        setUser(user);
+      })
+      .catch((error) => {
+        setError(error.message);
+      });
   };
   const handleEmailChange = (e) => {
     setEmail(e.target.value);
@@ -50,7 +55,7 @@ const useFirebase = () => {
     signInWithEmailAndPassword(auth, email, password)
       .then((result) => {
         const user = result.user;
-        console.log(user);
+        setUser(user);
         setError("");
       })
       .catch((error) => {
@@ -61,7 +66,6 @@ const useFirebase = () => {
   const registerNewUser = (email, password) => {
     createUserWithEmailAndPassword(auth, email, password)
       .then((result) => {
-        const user = result.user;
         verifyEmail();
       })
       .catch((error) => {
@@ -70,8 +74,7 @@ const useFirebase = () => {
   };
   const verifyEmail = () => {
     sendEmailVerification(auth.currentUser).then((result) => {
-      console.log(result);
-      setError("Email Sent Pleasse verify");
+      setError("Email Sent Please verify");
     });
   };
   const handleResetPassword = () => {
@@ -87,10 +90,21 @@ const useFirebase = () => {
   const toggleLogin = (e) => {
     setIsLogin(e.target.checked);
   };
+  const logOut = () => {
+    signOut(auth)
+      .then(() => {
+        setUser({});
+      })
+      .catch((error) => {
+        // An error happened.
+      });
+  };
   useEffect(() => {
     onAuthStateChanged(auth, (user) => {
       if (user) {
         setUser(user);
+      } else {
+        setUser({});
       }
     });
   }, []);
@@ -106,6 +120,7 @@ const useFirebase = () => {
     toggleLogin,
     registerNewUser,
     isLogin,
+    logOut,
   };
 };
 
