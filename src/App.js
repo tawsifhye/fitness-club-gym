@@ -3,7 +3,7 @@ import "./App.css";
 import Footer from "./components/Footer/Footer";
 import Header from "./components/Header/Header";
 import Home from "./components/Home/Home";
-import Events from "./components/Events/Events";
+import Trainer from "./components/Trainer/Trainer";
 import Contact from "./components/Contact/Contact";
 import Login from "./components/Login/Login";
 import NotFound from "./components/NotFound/NotFound";
@@ -26,8 +26,8 @@ function App() {
             <Route path="/details/:serviceId">
               <Details></Details>
             </Route>
-            <Route path="/events">
-              <Events></Events>
+            <Route path="/trainer">
+              <Trainer></Trainer>
             </Route>
             <Route path="/contact">
               <Contact></Contact>

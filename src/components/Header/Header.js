@@ -46,9 +46,9 @@ const Header = () => {
               <Link
                 className="nav-link active text-white link-hover"
                 aria-current="page"
-                to="/events"
+                to="/trainer"
               >
-                Events
+                Trainer
               </Link>
             </li>
             <li className="nav-item">
