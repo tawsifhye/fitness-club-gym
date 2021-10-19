@@ -14,10 +14,9 @@ const Details = () => {
   }, []);
   useEffect(() => {
     const foundService = services.find((service) => service.id === serviceId);
-    console.log(foundService);
     setSingleService(foundService);
   }, [services]);
-  console.log(singleService);
+  // console.log(singleService);
   return (
     <>
       <div className="text-center">
