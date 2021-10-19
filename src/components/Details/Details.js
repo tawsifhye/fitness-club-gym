@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 import { useState } from "react";
 import { useParams } from "react-router";
-
+import "./Details.css";
 const Details = () => {
   const { serviceId } = useParams();
   const [services, setServices] = useState([]);
@@ -18,13 +18,13 @@ const Details = () => {
   }, [services]);
   // console.log(singleService);
   return (
-    <>
-      <div className="text-center">
+    <div>
+      <div className="text-center ">
         <h1 className="p-2">{singleService?.title}</h1>
         <p className="p-2">{singleService?.description}</p>
         <img className="w-100" src={singleService?.thumb} alt="" />
       </div>
-    </>
+    </div>
   );
 };
 

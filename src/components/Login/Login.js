@@ -1,7 +1,4 @@
-import {
-  faGoogle,
-  faGooglePlusSquare,
-} from "@fortawesome/free-brands-svg-icons";
+import { faGoogle } from "@fortawesome/free-brands-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useHistory } from "react-router";
 import useAuth from "../../hooks/useAuth";
@@ -28,7 +25,10 @@ const Login = () => {
             Please {isLogin ? "Login" : "Register"}
           </h3>
           <div className="row mb-3">
-            <label htmlFor="inputEmail3" className="col-sm-2 col-form-label">
+            <label
+              htmlFor="inputEmail3"
+              className="col-sm-2 col-form-label me-2"
+            >
               Email
             </label>
             <div className="col-sm-10">
@@ -42,7 +42,10 @@ const Login = () => {
             </div>
           </div>
           <div className="row mb-3">
-            <label htmlFor="inputPassword3" className="col-sm-2 col-form-label">
+            <label
+              htmlFor="inputPassword3"
+              className="col-sm-2 col-form-label me-2"
+            >
               Password
             </label>
             <div className="col-sm-10">
@@ -83,10 +86,9 @@ const Login = () => {
           </button>
         </form>
         <br />
-        {/* <div>
+        <div>
           <hr className="w-100" />
-        </div> */}
-        <div>--------------------------------------------------------</div>
+        </div>
         <button
           className="btn btn-success p-2 fw-bold fs-5 text-white"
           onClick={handleGoogleSignIn}
