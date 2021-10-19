@@ -70,13 +70,10 @@ const Header = () => {
               </button>
             ) : (
               <li className="nav-item">
-                <Link
-                  className="nav-link active text-white
-                                link-hover"
-                  aria-current="page"
-                  to="/login"
-                >
-                  Login
+                <Link to="/login">
+                  <button className="btn btn-success fw-bolder rounded">
+                    Sign In
+                  </button>
                 </Link>
               </li>
             )}
