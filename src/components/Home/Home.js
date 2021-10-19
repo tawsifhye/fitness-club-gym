@@ -3,6 +3,7 @@ import { useEffect } from "react";
 import { useState } from "react";
 import bannerImg from "../../images/banner-img.jpg";
 import Services from "../Services/Services";
+import "./Home.css";
 const Home = () => {
   const [services, setServices] = useState([]);
 
@@ -42,7 +43,7 @@ const Home = () => {
           exercises that offer a dynamic and efficient full-body workout.
         </p>
       </div>
-      <div className="container row mx-auto">
+      <div className="container-fluid row mx-auto service-container">
         <div className="row row-cols-1 row-cols-sm-1 row-cols-md-2 row-cols-lg-3 row-cols-xl-3 g-4 mb-5 mx-auto">
           {services.map((service) => (
             <Services key={service.id} service={service}></Services>

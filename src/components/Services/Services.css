@@ -2,3 +2,6 @@
     height: 25em;
     object-fit: cover;
 }
+.card-design:hover{
+    transform: scale(1.05);
+}

@@ -62,7 +62,12 @@ const Header = () => {
               </Link>
             </li>
             {user.email ? (
-              <button onClick={logOut}>Log Out</button>
+              <button
+                className="btn btn-danger fw-bolder rounded"
+                onClick={logOut}
+              >
+                Log Out
+              </button>
             ) : (
               <li className="nav-item">
                 <Link

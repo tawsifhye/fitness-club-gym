@@ -6,7 +6,7 @@ const Services = (props) => {
   return (
     <>
       <div className="col">
-        <div className="card h-100 border-dark p-1 overflow-hidden">
+        <div className="card h-100 card-design border-dark p-1 rounded">
           <img src={thumb} className="card-img-top img-fluid" alt="..." />
           <div className="card-body">
             <h5 className="card-title text-center fw-bold">{title}</h5>
