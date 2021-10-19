@@ -60,6 +60,9 @@ const useFirebase = () => {
       })
       .catch((error) => {
         setError(error.message);
+      })
+      .finally(() => {
+        window.location.reload();
       });
   };
 
@@ -70,6 +73,9 @@ const useFirebase = () => {
       })
       .catch((error) => {
         setError(error.message);
+      })
+      .finally(() => {
+        window.location.reload();
       });
   };
   const verifyEmail = () => {

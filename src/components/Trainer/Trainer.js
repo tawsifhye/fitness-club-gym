@@ -55,7 +55,7 @@ const Trainer = () => {
               </div>
             </div>
           </div>
-          <div className="col">
+          <div className="col mb-5">
             <div className="card  bg-dark border-dark p-1">
               <img
                 src={trainer3pic}

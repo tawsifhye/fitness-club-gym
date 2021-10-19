@@ -13,8 +13,8 @@ const Header = () => {
             className="rounded-circle"
             src={logo}
             alt=""
-            width="111"
-            height="92"
+            width="100"
+            height="81"
           />
         </Link>
       </div>

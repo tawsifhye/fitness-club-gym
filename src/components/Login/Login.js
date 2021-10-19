@@ -1,6 +1,9 @@
-import React, { useEffect } from "react";
+import {
+  faGoogle,
+  faGooglePlusSquare,
+} from "@fortawesome/free-brands-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useHistory } from "react-router";
-import { Link } from "react-router-dom";
 import useAuth from "../../hooks/useAuth";
 import "./Login.css";
 const Login = () => {
@@ -20,7 +23,7 @@ const Login = () => {
   return (
     <div className="form-container d-flex justify-content-center align-items-center">
       <div className="mx-5 my-2">
-        <form onSubmit={handleRegistration}>
+        <form className="container" onSubmit={handleRegistration}>
           <h3 className="text-primary">
             Please {isLogin ? "Login" : "Register"}
           </h3>
@@ -79,10 +82,18 @@ const Login = () => {
             Reset Password
           </button>
         </form>
-        <div></div>
-        <br /> <br /> <br />
+        <br />
+        {/* <div>
+          <hr className="w-100" />
+        </div> */}
         <div>--------------------------------------------------------</div>
-        <button className="btn btn-warning" onClick={handleGoogleSignIn}>
+        <button
+          className="btn btn-success p-2 fw-bold fs-5 text-white"
+          onClick={handleGoogleSignIn}
+        >
+          <span className="pe-2 text-white">
+            <FontAwesomeIcon icon={faGoogle} />
+          </span>
           Google Sign In
         </button>
       </div>
