@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { HashLink } from "react-router-hash-link";
 import logo from "./logo.jpg";
 import "./Header.css";
 import useAuth from "../../hooks/useAuth";
@@ -33,14 +34,25 @@ const Header = () => {
         <div className="collapse navbar-collapse" id="navbarSupportedContent">
           <ul className="navbar-nav ms-auto pe-lg-5 mb-2 mb-lg-0 fw-bold fs-5">
             <li className="nav-item">
-              <Link
+              <HashLink
                 className="nav-link active text-white
                                 link-hover"
                 aria-current="page"
-                to="/home"
+                to="/home#home"
               >
                 Home
-              </Link>
+              </HashLink>
+            </li>
+            <li className="nav-item">
+              <HashLink
+                smooth
+                className="nav-link active text-white
+                                link-hover"
+                aria-current="page"
+                to="/home#service"
+              >
+                Training
+              </HashLink>
             </li>
             <li className="nav-item">
               <Link

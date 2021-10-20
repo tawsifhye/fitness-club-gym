@@ -14,7 +14,7 @@ const Home = () => {
   }, []);
   // console.log(services);
   return (
-    <div>
+    <div id="home">
       <h1 className=" text-center display-3 fw-bold p-2">
         Welcome to <span className="text-primary">Fitness Club</span>
       </h1>
@@ -43,7 +43,10 @@ const Home = () => {
           exercises that offer a dynamic and efficient full-body workout.
         </p>
       </div>
-      <div className="container-fluid row mx-auto service-container">
+      <div
+        className="container-fluid row mx-auto service-container"
+        id="service"
+      >
         <div className="row row-cols-1 row-cols-sm-1 row-cols-md-2 row-cols-lg-3 row-cols-xl-3 g-4 mb-5 mx-auto">
           {services.map((service) => (
             <Services key={service.id} service={service}></Services>

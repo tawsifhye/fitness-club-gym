@@ -1,10 +1,8 @@
 import { faGoogle } from "@fortawesome/free-brands-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { useHistory } from "react-router";
 import useAuth from "../../hooks/useAuth";
 import "./Login.css";
 const Login = () => {
-  let history = useHistory();
   const {
     handleGoogleSignIn,
     handleRegistration,
