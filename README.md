@@ -9,7 +9,8 @@ Open [Fitness Club](https://react-firebase-authentic-1042a.web.app/) to view it 
 ## Features
 
 - A Single Page Application(SPA).
-- Goole Sign In.
+- Goolge Sign In.
+- Email Password Sing up and Sign In.
 - Fully responsive website using Bootstrap5.
 
 ## Technology Used

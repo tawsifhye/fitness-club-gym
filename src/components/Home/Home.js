@@ -14,7 +14,7 @@ const Home = () => {
   }, []);
   // console.log(services);
   return (
-    <div id="home">
+    <div id="home" className="pt-3">
       <h1 className=" text-center display-3 fw-bold p-2">
         Welcome to <span className="text-primary">Fitness Club</span>
       </h1>
@@ -34,7 +34,7 @@ const Home = () => {
           </div>
         </div>
       </div>
-      <div className="text-center">
+      <div className="text-center pt-5">
         <h1 className="display-3 fw-bold">
           Our <span className="text-primary">Program</span>
         </h1>

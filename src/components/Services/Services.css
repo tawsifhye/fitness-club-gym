@@ -2,6 +2,19 @@
     height: 25em;
     object-fit: cover;
 }
-.card-design:hover{
+
+.card-design:hover {
     transform: scale(1.05);
+}
+
+.custom-font-size-services p {
+    font-size: 2vw;
+}
+
+.custom-font-size-services h3 {
+    font-size: 2.8vw;
+}
+
+.custom-font-size-services button {
+    font-size: 2vw;
 }
