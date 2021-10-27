@@ -12,6 +12,7 @@ const Details = () => {
       .then((res) => res.json())
       .then((data) => setServices(data));
   }, []);
+  //filtering data base on param
   useEffect(() => {
     const foundService = services.find((service) => service.id === serviceId);
     setSingleService(foundService);
