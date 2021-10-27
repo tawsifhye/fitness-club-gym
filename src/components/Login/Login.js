@@ -1,20 +1,31 @@
 import { faGoogle } from "@fortawesome/free-brands-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { useHistory, useLocation } from "react-router";
 import useAuth from "../../hooks/useAuth";
 import "./Login.css";
 const Login = () => {
+  const location = useLocation();
+  const history = useHistory();
+  const redirect_uri = location.state?.from || "/home";
+  
   const {
-    handleGoogleSignIn,
-    handleRegistration,
-    isLogin,
-    handleEmailChange,
-    handlePasswordChange,
-    toggleLogin,
-    user,
-    error,
-    handleResetPassword,
-  } = useAuth();
-  // console.log(user);
+    handleGoogleSignIn, handleRegistration, processLogin, isLogin, handleEmailChange, handlePasswordChange,toggleLogin, user, error, handleResetPassword} = useAuth();
+
+  const googleSignIn = () =>{
+    handleGoogleSignIn()
+    .then((result) => {
+      history.push(redirect_uri);
+    })   
+  }
+  /* const emailPassLogin = () =>{
+    handleRegistration()
+    isLogin ? (processLogin()
+    .then((result) => {
+      history.push(redirect_uri);
+    }))
+    :
+    handleRegistration();
+  } */
   return (
     <div className="form-container d-flex justify-content-center align-items-center">
       <div className="mx-5 my-2">
@@ -89,7 +100,7 @@ const Login = () => {
         </div>
         <button
           className="btn btn-success p-2 fw-bold fs-5 text-white"
-          onClick={handleGoogleSignIn}
+          onClick={googleSignIn}
         >
           <span className="pe-2 text-white">
             <FontAwesomeIcon icon={faGoogle} />

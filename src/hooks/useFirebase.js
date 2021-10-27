@@ -26,10 +26,9 @@ const useFirebase = () => {
   //google sign in
   const handleGoogleSignIn = () => {
     setIsLoading(true);
-    signInWithPopup(auth, GoogleProvider)
+    return signInWithPopup(auth, GoogleProvider)
       .then((result) => {
         const user = result.user;
-        console.log(user.email);
         setUser(user);
       })
       .catch((error) => {
@@ -55,7 +54,7 @@ const useFirebase = () => {
   };
 
   const processLogin = (email, password) => {
-    signInWithEmailAndPassword(auth, email, password)
+      return signInWithEmailAndPassword(auth, email, password)
       .then((result) => {
         const user = result.user;
         setUser(user);
@@ -70,7 +69,7 @@ const useFirebase = () => {
   };
 
   const registerNewUser = (email, password) => {
-    createUserWithEmailAndPassword(auth, email, password)
+    return createUserWithEmailAndPassword(auth, email, password)
       .then((result) => {
         verifyEmail();
       })
@@ -131,6 +130,7 @@ const useFirebase = () => {
     handleEmailChange,
     handlePasswordChange,
     handleRegistration,
+    processLogin,
     handleResetPassword,
     toggleLogin,
     registerNewUser,
